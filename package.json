@@ -1,0 +1,19 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "JaxXu Blog",
+  "main": "index.js",
+  "repository": "https://github.com/JaxXu/blog",
+  "author": "JaxXu",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "vitepress dev src",
+    "build": "yarn clear:build && vitepress build src && mv src/.vitepress/dist/* docs/",
+    "serve": "vitepress serve src",
+    "clear:build": "find docs | grep -E -v \"^docs(\\/CNAME)?$\" | xargs rm -rf"
+  },
+  "devDependencies": {
+    "vitepress": "^0.16.1"
+  }
+}
